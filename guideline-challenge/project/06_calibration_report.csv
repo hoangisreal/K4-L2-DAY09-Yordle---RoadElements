@@ -1,1 +1,5 @@
 sample_id,item,values_by_annotator,diagnosis,action,rule_change
+BDD04,area_type,"cuong=__undefined__; hoang=undefined; dai=direct",guideline_gap,revise_rule,"Bổ sung checklist bắt buộc mọi polygon có area_type=direct|alternative trước export; undefined chỉ là trạng thái chưa hoàn thành."
+BDD17,polygon count and area_type,"cuong=1/__undefined__; hoang=1/undefined; dai=4/direct+3 alternative",guideline_gap,add_example,"Quy định tách một polygon cho mỗi vùng liên thông cùng area_type và tách direct/alternative tại lane marking hoặc nhánh nối."
+BDD18,polygon count area_type and needs_review,"cuong=1/__undefined__/false; hoang=1/undefined/false; dai=2/direct+alternative/true",data_ambiguity,add_escalation,"Trong cảnh đêm vẫn chọn area_type best-effort; bật needs_review khi bóng tối làm thay đổi class hoặc hơn 10% vùng gần xe."
+BDD20,area_type,"cuong=__undefined__; hoang=undefined; dai=direct",execution_error,coaching,"Dùng Attribute annotation mode để rà toàn bộ polygon và không export khi còn undefined."

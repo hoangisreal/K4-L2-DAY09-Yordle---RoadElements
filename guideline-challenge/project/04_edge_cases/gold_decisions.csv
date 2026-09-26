@@ -1,18 +1,18 @@
 sample_id,decision_id,expected,severity,rationale
-BDD03,d1,label=drivable_direct for the current ego lane and drivable_alternative for each legally reachable adjacent lane,major,Phân biệt current lane với lane có thể chuyển vào là semantics cốt lõi
-BDD03,d2,IGNORE grass and asphalt shoulder outside the solid yellow edge line,critical,Không tạo hành lang chạy xe qua shoulder hoặc grass
-BDD03,d3,geometry: direct and alternative polygons split at the lane marking; road-edge lines stay inside the road-side polygon; ego hood excluded,minor,Kiểm tra geometry baseline và ranh giới hai class
-BDD10,d1,label=drivable_direct x1 for the through carriageway,major,Carriageway chứa ego phải liên tục qua xe phía trước
-BDD10,d2,IGNORE the curbside parking strip and sidewalk; no drivable_alternative on that strip,critical,Parking strip không phải nhánh chạy xe thông thường
-BDD10,d3,boundary_confidence=clear and needs_review=false on the direct polygon,minor,Ảnh ban ngày có vạch và biên đủ rõ
-BDD21,d1,label=drivable_direct for the current ego lane and drivable_alternative for a legally reachable adjacent lane if separated only by a permissive lane marking,major,Kiểm tra direct/alternative trước giao lộ
-BDD21,d2,IGNORE all regions behind the right guardrail and the separated roadside area,critical,Guardrail là physical separator tuyệt đối
-BDD21,d3,geometry: class polygons split at lane markings and the rightmost polygon stops at the carriageway side of the guardrail/edge boundary,minor,Ngăn gộp lane hoặc tràn qua barrier
-BDD24,d1,label=drivable_direct x1 with boundary_confidence=unknown,major,Tuyết và xe đỗ che một phần road edge nhưng class direct vẫn xác định được
-BDD24,d2,IGNORE snowbanks and sidewalk on both road edges,critical,Snowbank-as-road là critical false positive
-BDD24,d3,needs_review=true on the direct polygon; no image_escalate tag,major,Ambiguity ở biên polygon đáng review nhưng carriageway vẫn xác định được
-BDD24,d4,geometry: best-effort polygon follows the visible wet-road/snowbank contact and interpolates only short occlusions,minor,Kiểm tra rule biên mờ và occlusion
-BDD26,d1,label=drivable_direct x1 with boundary_confidence=unknown,major,Carriageway còn nhận biết nhưng biên tối không đủ clear
-BDD26,d2,needs_review=true on the direct polygon,critical,Ambiguity biên trong cảnh đêm phải được chuyển review
-BDD26,d3,IGNORE dark areas outside evidenced road surface and curbside parked-car strip,critical,Không coi darkness là bằng chứng road surface
-BDD26,d4,no image_escalate tag because the ego carriageway remains identifiable,major,Escalation cấp ảnh chỉ dùng khi cả cảnh vượt ngưỡng
+BDD03,d1,label=drivable_area x2,major,Bản final tách hai vùng semantic trên highway
+BDD03,d2,area_type=direct x1 and alternative x1; needs_review=false on both,critical,Phân biệt current lane với lane có thể chuyển vào là semantics cốt lõi
+BDD03,d3,geometry: direct and alternative polygons split at the lane marking; ego hood and grass outside road are excluded,minor,Kiểm tra geometry baseline và ranh giới hai loại
+BDD10,d1,label=drivable_area x4,major,Bản final tách một direct và ba vùng alternative trong cảnh city street
+BDD10,d2,area_type=direct x1 and alternative x3; needs_review=false on all polygons,critical,Không gộp mọi asphalt vào corridor direct
+BDD10,d3,geometry: curbside sidewalk and parked-vehicle bodies remain outside the drivable polygons,minor,Kiểm tra exclusion và biên city street
+BDD21,d1,label=drivable_area x3,major,Bản final tách corridor ego và hai vùng có thể đi vào
+BDD21,d2,area_type=direct x1 and alternative x2; needs_review=false on all polygons,critical,Kiểm tra direct/alternative trước giao lộ
+BDD21,d3,geometry: right-side guardrail and separated roadside area are excluded,minor,Guardrail là physical separator
+BDD24,d1,label=drivable_area x2,major,Bản final tách hai vùng dù snowbank và xe đỗ làm cảnh phức tạp
+BDD24,d2,area_type=direct x1 and alternative x1; needs_review=false on both,critical,Final đã chốt đủ bằng chứng cho hai vùng
+BDD24,d3,IGNORE snowbanks sidewalk and parked-vehicle bodies,critical,Snowbank-as-road là critical false positive
+BDD24,d4,geometry: polygons follow visible wet-road/snowbank contact without extending into snowbank,minor,Kiểm tra biên mùa đông
+BDD26,d1,label=drivable_area x2,major,Bản final giữ hai vùng drivable có bằng chứng trong cảnh đêm
+BDD26,d2,area_type=direct x1 and alternative x1; needs_review=false on both,critical,Final đã chốt semantics dù ánh sáng thấp
+BDD26,d3,IGNORE dark areas outside evidenced road surface and parked-vehicle bodies,critical,Không coi darkness là bằng chứng road surface
+BDD26,d4,no polygon keeps area_type=undefined or __undefined__,major,Final export phải có semantic decision nhìn thấy được

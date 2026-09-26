@@ -3,15 +3,15 @@ BDD01,example,normal,Highway ban ngày làm ví dụ baseline cho direct lane al
 BDD02,example,edge;conflict;ambiguity,Intersection kiểm tra crosswalk side street sidewalk và traffic island
 BDD16,example,edge;conflict,Nhánh tách nhập dưới cầu kiểm tra direct alternative và painted gore
 BDD23,example,edge;occlusion;low_visibility,Đường tuyết có xe đỗ che curb để minh họa unknown và review
-BDD04,calibration,edge;occlusion,Đường hẹp có xe đỗ kiểm tra nội suy biên qua occlusion
+BDD04,calibration,edge;occlusion,Đường hẹp có xe đỗ kiểm tra loại footprint vật cản và tách polygon khi cần
 BDD05,calibration,edge;conflict,Highway có shoulder và edge line kiểm tra exclusion
 BDD11,calibration,edge;ambiguity,Intersection và crosswalk kiểm tra continuity của direct
 BDD13,calibration,edge;occlusion;conflict,City street đông xe kiểm tra road edge và vùng bị che
-BDD17,calibration,edge;low_visibility,Ảnh mưa kiểm tra reflection và confidence của biên
-BDD18,calibration,critical;ambiguity;low_visibility,Ảnh đêm tối kiểm tra escalation cấp polygon hoặc cấp ảnh
+BDD17,calibration,edge;low_visibility,Ảnh mưa kiểm tra reflection và uncertainty của biên
+BDD18,calibration,critical;ambiguity;low_visibility,Ảnh đêm tối kiểm tra escalation bằng needs_review cấp polygon
 BDD20,calibration,edge;conflict,Residential junction kiểm tra side street curb và shoulder
 BDD03,blind,normal,Highway rõ để đo baseline transferability
 BDD10,blind,edge;occlusion;conflict,City street có curbside parking strip và xe đỗ
 BDD21,blind,edge;conflict,Carriageway cạnh guardrail và giao lộ xa kiểm tra exclusion và continuity
 BDD24,blind,edge;critical;low_visibility,Đường tuyết ướt với snowbank kiểm tra false positive rủi ro cao
-BDD26,blind,critical;ambiguity;low_visibility,Ảnh đêm kiểm tra unknown needs_review và ngưỡng image escalation
+BDD26,blind,critical;ambiguity;low_visibility,Ảnh đêm kiểm tra area_type best-effort và needs_review cho biên tối

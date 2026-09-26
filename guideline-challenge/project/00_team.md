@@ -12,5 +12,7 @@
 | Nguyễn Đình Đại | https://github.com/daindti | CVAT owner | `03_ontology_and_cvat_setup.md`, `03_cvat_labels.json`, `sample_pack.csv`, `09_cvat_export_or_task_reference.txt` |
 | Đặng Đức Cường | https://github.com/cuonglatao1 | Gold + QA owner | `04_edge_cases/`, `05_qa_plan.md`, `06_calibration_report.csv`, `07_blind_handoff/`, `08_revision_log.md` |
 
-Calibration do cả ba thành viên label độc lập. Việc phân công là người sửa chính; quyết định về scope, gold và thay đổi
-guideline phải được cả nhóm xác nhận trước khi freeze.
+Ba thành viên thao tác riêng trên ba task/export. Vì các export thuộc ba lượt annotation/schema khác nhau, báo cáo
+calibration đo cả khác biệt giữa người label và khác biệt giữa revision; không coi đây là thí nghiệm cùng một Guide
+nghiêm ngặt. Việc phân công là người sửa chính; quyết định về scope, gold và thay đổi guideline phải được cả nhóm xác
+nhận trước khi freeze.
