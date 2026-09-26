@@ -65,5 +65,5 @@ Nhóm 99 đạt GTS 68.0 nhưng có 3 critical escapes; theo ngưỡng phía tr�
 phải quality pass. Owner đã cập nhật guideline lên v3 và thêm overlay tham chiếu; cần một blind revalidation độc lập
 trước khi kết luận rule mới đã khắc phục các lỗi. `make check` chỉ xác nhận độ đầy đủ hồ sơ, không thay thế quality gate.
 
-Clarification log hiện có 0 câu hỏi được ghi nên công cụ tính I=100. Feedback của Nhóm 99 không nêu riêng số câu hỏi;
-xác nhận log đầy đủ trước khi mô tả đây là xác nhận rằng peer không hỏi gì.
+Nguyễn Ngọc Nguyên/Nhóm 99 xác nhận có 0 câu hỏi domain rule trong blind window; vì vậy clarification log chỉ có
+header và I=100 phản ánh đúng số câu hỏi được peer báo cáo.

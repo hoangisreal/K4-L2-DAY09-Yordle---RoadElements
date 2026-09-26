@@ -3,8 +3,9 @@
 Phần 1 do **nhóm peer** trả lời (gửi kèm file export). Phần 2 do **nhóm owner** điền. Export và 5 câu feedback của
 Nhóm 99 đã được ghi nhận; export được chấm trong `transfer_score.csv`.
 
-- **Nhóm peer:** Nhóm 99 (theo thông tin owner cung cấp cùng `nhom99.zip`)
-- **Người label blind:** Chưa được peer xác nhận
+- **Nhóm peer:** Nhóm 99 — cặp peer chính thức
+- **Người label blind:** Nguyễn Ngọc Nguyên
+- **Số câu hỏi domain rule trong blind window:** 0
 
 ## 1. Peer trả lời
 
@@ -35,6 +36,6 @@ Owner không tranh luận để bảo vệ guideline. Mỗi feedback và mỗi d
 
 **Disposition chất lượng:** GTS 68,0 với 3 critical escapes; theo `05_qa_plan.md`, trạng thái là REJECT/ESCALATE. Guideline đã được sửa lên v3, nhưng chưa có blind revalidation sau sửa nên chưa tuyên bố đạt quality gate.
 
-**Clarification count:** `clarification_log.csv` hiện có 0 câu hỏi được ghi; GTS đang tính I=100 theo log. Năm feedback của Nhóm 99 không xác nhận riêng số câu hỏi, nên trước khi báo cáo độc lập như một sự kiện cần xác minh rằng log đầy đủ/peer không hỏi câu nào.
+**Clarification count:** Nguyễn Ngọc Nguyên/Nhóm 99 xác nhận không hỏi câu domain rule nào trong blind window. Vì vậy `clarification_log.csv` chỉ có header và GTS tính I=100 từ 0 câu hỏi.
 
 Các nguyên nhân trên là phân loại owner dựa trên export, gold đã freeze và feedback của Nhóm 99; nguyên nhân thao tác ở từng polygon vẫn có thể được xác nhận thêm trong debrief.

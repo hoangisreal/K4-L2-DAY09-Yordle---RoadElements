@@ -34,3 +34,16 @@ biên bản quan sát một thành viên mới:
 - Attribute bắt buộc: `area_type=direct|alternative`; `needs_review=true` khi cần escalation.
 - Điểm vấp thể hiện trong export: v1 và v2 để toàn bộ `area_type` ở `__undefined__/undefined`; v3 đã sửa thành
   direct/alternative. Vì vậy guideline v2 bổ sung checklist cấm export khi còn undefined.
+
+### Artifact-based setup validation (2026-09-26)
+
+Owner chạy lại các kiểm tra có thể tái lập thay cho phần quan sát con người còn thiếu:
+
+- `python3 -m json.tool project/03_cvat_labels.json` pass; label/attribute/default khớp ontology table.
+- Ba archive CVAT đều đọc được: `cuong_v1.zip` 26 ảnh/44 polygon, `hoang_v2.zip` 26 ảnh/26 polygon,
+  `dai_v3final.zip` 26 ảnh/61 polygon.
+- `make check` pass G1–G6 và `make verify` xác nhận gold/sample pack khớp tag freeze.
+
+Kiểm tra này chứng minh artifact có thể parse và schema nhất quán ở trạng thái cuối, nhưng không thay thế một setup
+test quan sát trực tiếp thành viên mới. Không ghi ba export là calibration cùng một Guide/schema: chúng là ba lượt
+annotation/schema khác nhau như đã nêu ở trên.

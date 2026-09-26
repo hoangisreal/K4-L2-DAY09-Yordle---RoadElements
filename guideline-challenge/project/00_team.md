@@ -1,7 +1,8 @@
 # Team
 
 - **Team:** Yordle
-- **Nhóm peer đã gửi blind export + feedback:** Nhóm 99 (theo hồ sơ owner nhận được); việc Lab Coach có chính thức phân công nhóm này chưa được xác nhận
+- **Nhóm peer test bài của mình:** Nhóm 99 — cặp peer chính thức
+- **Người trực tiếp label blind:** Nguyễn Ngọc Nguyên
 - **Nhóm mình test bài của:** Chưa được Lab Coach công bố
 - **Problem family:** Drivable area — phân biệt vùng chạy trực tiếp, vùng kết nối thay thế và vùng không được phép gán nhãn trong cảnh khó
 - **Nguồn ảnh:** `bdd100k`
