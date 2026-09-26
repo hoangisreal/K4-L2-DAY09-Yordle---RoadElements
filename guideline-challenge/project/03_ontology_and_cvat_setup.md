@@ -19,8 +19,9 @@ phải đổi thành `direct` hoặc `alternative`.
 
 - **Phiên bản CVAT:** 2.75.1
 - **Task/export:** Cường — task 33 `day09-lab-growntruth`; Hoàng — task 19 `challenge bdd100k`; Đại — job 27, export final `dai_v3final.zip`
-- **Guide:** Guide chuẩn để handoff là `02_guideline.md` v2 hiện tại. Hậu tố v1/v2/v3 trong tên export chỉ ba lượt
-  annotation/schema khác nhau, không chứng minh ba phiên bản Guide đã được dán trong CVAT.
+- **Guide/version history:** Blind pack được freeze và gửi theo `02_guideline.md` v2; sau khi nhận export + feedback
+  của Nhóm 99, owner cập nhật guideline hiện tại lên v3. Hậu tố v1/v2/v3 trong tên export calibration chỉ các lượt
+  annotation/schema khác nhau, không chứng minh version Guide nào đã được dán trong từng task CVAT.
 - **Nhóm dùng Track hay Shape:** Shape; dữ liệu là ảnh tĩnh độc lập.
 
 ## Setup test

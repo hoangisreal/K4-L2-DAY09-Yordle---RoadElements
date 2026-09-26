@@ -2,9 +2,10 @@ CVAT task reference
 
 CVAT version: 2.75.1
 Task calibration (tên, id): Cường — task 33 day09-lab-growntruth; Hoàng — task 19 challenge bdd100k; Đại — job 27 (task name/id không có trong job export)
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Job 27; export final đã sửa toàn bộ area_type, nhưng guideline chưa lên v3 vì chưa có blind peer handoff
+Task CVAT bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Chưa có task CVAT riêng được ghi nhận. Job 27 là export calibration final của owner, không phải bằng chứng đã annotate theo guideline v3. Blind pack được gửi theo bản freeze v2; task ID CVAT của Nhóm 99 không có trong annotations.xml.
 File export gốc (đường dẫn trong repo): project/06_calibration_exports/cuong_v1.zip; project/06_calibration_exports/hoang_v2.zip; project/06_calibration_exports/dai_v3final.zip
 File calibration chỉ chứa đúng 7 ảnh trong sample_pack: project/06_calibration_exports/calibration/cuong.zip; project/06_calibration_exports/calibration/hoang.zip; project/06_calibration_exports/calibration/dai.zip
 Lệnh tái tạo report đo lường: python3 lab9.py calib project/06_calibration_exports/calibration/cuong.zip project/06_calibration_exports/calibration/hoang.zip project/06_calibration_exports/calibration/dai.zip
-Guideline version dán trong Guide của task: Không có bằng chứng đủ để xác nhận version Guide trong từng task. Hậu tố v1/v2/v3 là lượt annotation/schema; Guide chuẩn hiện tại là guideline v2 sau calibration.
-Ghi chú cho người tiếp nhận: final_vf.zip được lưu thành dai_v3final.zip và đã sửa hai lỗi self-intersection nhỏ ở BDD09/BDD12; có 26 ảnh, 61 polygon, 26 direct và 35 alternative; không còn area_type undefined; 2 polygon BDD18 có needs_review=true. Phần peer sẽ cập nhật sau.
+Guideline version dán trong Guide của các task calibration: Không có bằng chứng đủ để xác nhận. Hậu tố v1/v2/v3 là lượt annotation/schema, không phải version guideline. Blind pack dùng bản v2 tại thời điểm freeze; `project/02_guideline.md` hiện là v3 sau phản hồi Nhóm 99.
+Peer export: `project/07_blind_handoff/peer_output/nhom99.zip`; feedback đã ghi trong `project/07_blind_handoff/peer_feedback.md`. XML không cung cấp tên hoặc ID task CVAT của peer.
+Ghi chú cho người tiếp nhận: `final_vf.zip` được lưu thành `dai_v3final.zip` và đã sửa hai lỗi self-intersection nhỏ ở BDD09/BDD12; có 26 ảnh, 61 polygon, 26 direct và 35 alternative; không còn area_type undefined; 2 polygon BDD18 có needs_review=true. Kết quả blind: GTS 68.0, 3 critical escapes; guideline v3 cần được blind revalidation. Clarification log hiện không có dòng hỏi nào, nên I=100 đang dựa trên 0 câu được ghi nhận.

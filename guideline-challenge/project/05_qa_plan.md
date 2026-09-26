@@ -58,3 +58,12 @@ REJECT / ESCALATE if:
 **Trade-off:** review 100% risk-tagged làm tăng chi phí nhưng bộ chỉ có 26 ảnh và hậu quả false-positive non-road
 cao. Ngưỡng geometry thấp hơn class accuracy vì biên mưa/tuyết/đêm có uncertainty hợp lệ; attribute completeness phải
 100% vì `undefined` hoặc `__undefined__` là lỗi thao tác có thể kiểm tự động.
+
+## Current blind-transfer disposition (2026-09-26)
+
+Nhóm 99 đạt GTS 68.0 nhưng có 3 critical escapes; theo ngưỡng phía trên, disposition là **REJECT / ESCALATE**, không
+phải quality pass. Owner đã cập nhật guideline lên v3 và thêm overlay tham chiếu; cần một blind revalidation độc lập
+trước khi kết luận rule mới đã khắc phục các lỗi. `make check` chỉ xác nhận độ đầy đủ hồ sơ, không thay thế quality gate.
+
+Clarification log hiện có 0 câu hỏi được ghi nên công cụ tính I=100. Feedback của Nhóm 99 không nêu riêng số câu hỏi;
+xác nhận log đầy đủ trước khi mô tả đây là xác nhận rằng peer không hỏi gì.
