@@ -1,8 +1,8 @@
-CVAT task reference — thay mọi placeholder mới là xong.
+CVAT task reference
 
-CVAT version: TODO
-Task calibration (tên, id): TODO
-Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: TODO
-File export đã nộp (đường dẫn trong repo): TODO
-Guideline version dán trong Guide của task: TODO
-Ghi chú cho người tiếp nhận: TODO
+CVAT version: 2.75.1
+Task calibration (tên, id): Chưa tạo; tên dự kiến Yordle-calib-v1-hoang, Yordle-calib-v1-dai, Yordle-calib-v1-cuong
+Task bản cuối theo guideline v3 (tên, id) hoặc lý do không có: Chưa có vì chưa calibration và blind handoff
+File export đã nộp (đường dẫn trong repo): Chưa có; sẽ đặt tại project/06_calibration_exports/ và project/07_blind_handoff/peer_output/
+Guideline version dán trong Guide của task: Chưa dán; bản soạn trước hiện tại là v1
+Ghi chú cho người tiếp nhận: Dùng Shape polygon trên ảnh tĩnh; sau khi tạo task phải chạy setup test và cập nhật file này bằng task id/export thực tế.

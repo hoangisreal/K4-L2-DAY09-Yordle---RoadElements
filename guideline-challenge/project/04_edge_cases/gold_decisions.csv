@@ -1,1 +1,18 @@
 sample_id,decision_id,expected,severity,rationale
+BDD03,d1,label=drivable_direct for the current ego lane and drivable_alternative for each legally reachable adjacent lane,major,Phân biệt current lane với lane có thể chuyển vào là semantics cốt lõi
+BDD03,d2,IGNORE grass and asphalt shoulder outside the solid yellow edge line,critical,Không tạo hành lang chạy xe qua shoulder hoặc grass
+BDD03,d3,geometry: direct and alternative polygons split at the lane marking; road-edge lines stay inside the road-side polygon; ego hood excluded,minor,Kiểm tra geometry baseline và ranh giới hai class
+BDD10,d1,label=drivable_direct x1 for the through carriageway,major,Carriageway chứa ego phải liên tục qua xe phía trước
+BDD10,d2,IGNORE the curbside parking strip and sidewalk; no drivable_alternative on that strip,critical,Parking strip không phải nhánh chạy xe thông thường
+BDD10,d3,boundary_confidence=clear and needs_review=false on the direct polygon,minor,Ảnh ban ngày có vạch và biên đủ rõ
+BDD21,d1,label=drivable_direct for the current ego lane and drivable_alternative for a legally reachable adjacent lane if separated only by a permissive lane marking,major,Kiểm tra direct/alternative trước giao lộ
+BDD21,d2,IGNORE all regions behind the right guardrail and the separated roadside area,critical,Guardrail là physical separator tuyệt đối
+BDD21,d3,geometry: class polygons split at lane markings and the rightmost polygon stops at the carriageway side of the guardrail/edge boundary,minor,Ngăn gộp lane hoặc tràn qua barrier
+BDD24,d1,label=drivable_direct x1 with boundary_confidence=unknown,major,Tuyết và xe đỗ che một phần road edge nhưng class direct vẫn xác định được
+BDD24,d2,IGNORE snowbanks and sidewalk on both road edges,critical,Snowbank-as-road là critical false positive
+BDD24,d3,needs_review=true on the direct polygon; no image_escalate tag,major,Ambiguity ở biên polygon đáng review nhưng carriageway vẫn xác định được
+BDD24,d4,geometry: best-effort polygon follows the visible wet-road/snowbank contact and interpolates only short occlusions,minor,Kiểm tra rule biên mờ và occlusion
+BDD26,d1,label=drivable_direct x1 with boundary_confidence=unknown,major,Carriageway còn nhận biết nhưng biên tối không đủ clear
+BDD26,d2,needs_review=true on the direct polygon,critical,Ambiguity biên trong cảnh đêm phải được chuyển review
+BDD26,d3,IGNORE dark areas outside evidenced road surface and curbside parked-car strip,critical,Không coi darkness là bằng chứng road surface
+BDD26,d4,no image_escalate tag because the ego carriageway remains identifiable,major,Escalation cấp ảnh chỉ dùng khi cả cảnh vượt ngưỡng
